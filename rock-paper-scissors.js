@@ -7,12 +7,17 @@ function getHumanChoice() { //GETING THE HUMAN CHOICE
     const humanChoice = prompt("Now, please enter your choice: Rock, Paper or Scissors?");
     return humanChoice.toLowerCase();
 };
+
 function playGame(humanChoice, computerChoice) { //PLAYING THE GAME
     const rounds = 5;
     let humanScore = 0;
     let computerScore = 0;
+
     console.log("".padStart(10, "-") + "Welcome to the game of Rock, Paper, Scissors!" + "".padEnd(10, "-") + "\n\n");
+
     for(let i = 1; i <= rounds; i++){
+        console.log("Round " + i + "\n");
+        
         const humanSection = humanChoice();
         const computerSection = computerChoice();
         console.log("You: " + humanSection);
